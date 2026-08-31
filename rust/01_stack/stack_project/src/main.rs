@@ -3,7 +3,11 @@ pub struct Stack {
     top: isize,
 }
 
-impl Stack {
+impl Default for Stack {
+    fn default() -> Self {
+        Self::new()
+    }
+
     pub fn new() -> Self {
         Stack {
             data: [0; 5],
