@@ -3,12 +3,9 @@ pub struct Stack {
     top: isize,
 }
 
-impl Default for Stack {
-    fn default() -> Self {
-        Self::new()
-    }
-
-    pub fn new() -> Self {
+// 1. Inherent methods belong in the struct's own impl block
+impl Stack {
+   pub fn new() -> Self {
         Stack {
             data: [0; 5],
             top: -1,
@@ -35,6 +32,13 @@ impl Default for Stack {
             self.top -= 1;
             Some(val)
         }
+    }
+}
+
+// 2. The Default trait implementation stays clean and focused
+impl Default for Stack {
+    fn default() -> Self {
+        Self::new()
     }
 }
 
