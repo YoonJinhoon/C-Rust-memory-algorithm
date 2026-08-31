@@ -25,6 +25,18 @@ void push(Stack *s, int value) {
     printf("Value: %2d | Address: %p\n", value, (void*)&s->data[s->top]);
 }
 
+int pop(Stack *s) {
+    if (s->top < 0) {
+        printf("Stack Underflow!\n");
+        return -1;
+    }
+
+    // Print the exact memory address the integer is popped from
+    printf("Popped %d <- Memory Address: %p\n", s->data[s->top], (void*)&s->data[s->top]);
+
+    return s->data[s->top--];
+}
+
 int main() {
     Stack s;
     init_stack(&s);
@@ -33,6 +45,10 @@ int main() {
     push(&s, 10);
     push(&s, 20);
     push(&s, 30);
+
+    printf("\n--- Popping from Stack ---\n");
+    pop(&s);
+    pop(&s);
 
     return 0;
 }
