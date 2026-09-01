@@ -38,7 +38,7 @@ fn bubble_sort(arr: &mut [i32]) {
 
 // Utility function to print array values and memory addresses
 fn print_array_with_addresses(label: &str, arr: &[i32]) {
-    println!("{}", label);
+    println!("{label}");
     for (i, &val) in arr.iter().enumerate() {
         println!("Index {} | Value: {:2} | Address: {:p}", i, val, &arr[i] as *const i32);
     }
