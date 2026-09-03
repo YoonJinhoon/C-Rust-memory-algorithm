@@ -1,0 +1,8 @@
+# C artifacts
+*.exe
+*.o
+*.out
+
+# Rust artifacts
+/rust/**/target/
+Cargo.lock

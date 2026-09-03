@@ -1,1 +1,12 @@
+<<<<<<< HEAD
 /target
+=======
+# C artifacts
+*.exe
+*.o
+*.out
+
+# Rust artifacts
+/rust/**/target/
+Cargo.lock
+>>>>>>> e4de63c57c5a171e9671166f21cca32a81e3af0a
